@@ -1,66 +1,37 @@
-## Foundry
+## Naven Contracts
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+Smart contract collection for the Naven Network.
 
-Foundry consists of:
+### Prerequisites
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+- Node.js
 
-## Documentation
+### Installation
 
-https://book.getfoundry.sh/
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/naven-contracts.git
+   cd naven-contracts
+   ```
 
-## Usage
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Build
+3. Set up environment variables:
+    - Copy the example environment file:
+      ```bash
+      cp .env.example .env
+      ```
+    - Open `.env` and configure:
+        - `PRIVATE_KEY`: Your wallet private key
+        - `RPC_URL`: Network RPC endpoint
 
-```shell
-$ forge build
-```
+### Deployment
 
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
+To deploy the NFT collection:
 
 ```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
+make deploy-Collection
 ```
